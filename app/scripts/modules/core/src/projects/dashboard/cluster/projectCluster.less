@@ -1,0 +1,63 @@
+@import (reference) "~core/presentation/less/imports/commonImports.less";
+
+project-cluster {
+  .cluster-name {
+    display: inline-block;
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+  .cluster-health {
+    background-color: @pod_header_blue;
+    font-size: 80%;
+    padding-right: 10px;
+  }
+  .rollup-title-cell {
+    .pod-center {
+      border-right: none;
+    }
+  }
+  .health-counts {
+    font-size: 80%;
+  }
+
+  table {
+    .instance-health-counts {
+      float: none !important;
+      font-size: 120%;
+    }
+    &.table > thead > tr > th {
+      border-bottom-width: 1px;
+    }
+  }
+
+  .rollup-entry, .table {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    &:last-child {
+      background-color: transparent;
+    }
+  }
+
+  .rollup-details {
+    a {
+      &.heavy {
+        font-weight: 600;
+      }
+      color: @text-color;
+      &:hover, &:active {
+        color: @text-color;
+      }
+    }
+    .text-warning {
+      color: @unhealthy_orange;
+    }
+    .instance-health-counts {
+      padding-left: 0;
+    }
+    background-color: transparent;
+    border: none;
+    margin-left: 25px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,55 @@
+@import (reference) "~core/presentation/less/imports/commonImports.less";
+
+.glyphicon {
+  &.healthy {
+    color: @healthy_green_border;
+  }
+  &.unhealthy {
+    color: @unhealthy_red;
+  }
+  &.unknown {
+    color: @mid_grey;
+  }
+}
+
+health-counts {
+  display: inherit; // Since health-counts wraps a react component with a .health-counts class that does all the layout now, make this component not have layout
+  &.no-float {
+    .instance-health-counts {
+      float: none;
+    }
+  }
+}
+
+.health-counts {
+  display: inline;
+  .instance-health-counts {
+    float: right;
+    padding-left: 5px;
+  }
+  &.no-float {
+    .instance-health-counts {
+      float: none;
+    }
+  }
+  .instance-health-counts {
+    .glyphicon {
+      top: 0;
+    }
+    .healthy {
+      color: #8cad6e;
+    }
+    .unhealthy {
+      color: @unhealthy_orange;
+    }
+    .dead {
+      color: #D9534F;
+    }
+  }
+}
+
+.securityGroup-counts {
+  .count {
+    margin-left: 5px;
+  }
+}
